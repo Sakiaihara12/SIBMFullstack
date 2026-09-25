@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #2E4A7D;
+    }
+    marquee {
+      color: #2E4A7D;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #2E4A7D;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gallery</h1>
+  <marquee behavior="scroll" direction="left">Klik gambar untuk lihat ukuran penuh</marquee>
+
+  <div class="gallery">
+    <a href="https://i.pinimg.com/736x/78/1c/06/781c069bc4b436fbb1f8d060f20372f5.jpg" target="_blank">
+      <img src="https://i.pinimg.com/736x/78/1c/06/781c069bc4b436fbb1f8d060f20372f5.jpg" alt="Foto 1">
+    </a>
+    <!-- tambahkan gambar lain di sini dengan pola yang sama -->
+  </div>
+</body>
+</html>
