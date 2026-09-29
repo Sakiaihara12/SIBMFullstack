@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tugas 1 - JavaScript: Menghitung Luas Bangun Datar</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f4f4f4;
+      }
+      .hasil {
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 16px 20px;
+        margin-bottom: 12px;
+        max-width: 400px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tugas 1 - Menghitung Luas Persegi Panjang, Bujur Sangkar, dan Segitiga</h1>
+
+    <div class="hasil" id="hasilPersegiPanjang"></div>
+    <div class="hasil" id="hasilBujurSangkar"></div>
+    <div class="hasil" id="hasilSegitiga"></div>
+
+    <script>
+      // Fungsi menghitung luas persegi panjang
+      // Rumus: panjang x lebar
+
+      function hitungLuasPersegiPanjang(panjang, lebar) {
+        var luas = panjang * lebar; // operator perkalian
+        return luas;
+      }
+
+      // Fungsi menghitung luas bujur sangkar
+      // Rumus: sisi x sisi
+
+      function hitungLuasBujurSangkar(sisi) {
+        var luas = sisi * sisi; // operator perkalian, sisi dikali sisi itu sendiri
+        return luas;
+      }
+
+      // Fungsi menghitung luas segitiga
+      // Rumus: (alas x tinggi) / 2
+
+      function hitungLuasSegitiga(alas, tinggi) {
+        var luas = (alas * tinggi) / 2; // operator perkalian dan pembagian
+        return luas;
+      }
+
+      // Nilai variabel/argumen (bebas, tinggal diganti sesuai kebutuhan)
+
+      var panjangPersegiPanjang = 12;
+      var lebarPersegiPanjang = 5;
+
+      var sisiBujurSangkar = 7;
+
+      var alasSegitiga = 10;
+      var tinggiSegitiga = 6;
+
+      // Memanggil tiap fungsi dan menyimpan hasilnya
+      var luasPersegiPanjang = hitungLuasPersegiPanjang(panjangPersegiPanjang, lebarPersegiPanjang);
+      var luasBujurSangkar = hitungLuasBujurSangkar(sisiBujurSangkar);
+      var luasSegitiga = hitungLuasSegitiga(alasSegitiga, tinggiSegitiga);
+
+      // Menampilkan hasil ke halaman
+      document.getElementById("hasilPersegiPanjang").innerText = "Luas Persegi Panjang (p=" + panjangPersegiPanjang + ", l=" + lebarPersegiPanjang + ") = " + luasPersegiPanjang;
+
+      document.getElementById("hasilBujurSangkar").innerText = "Luas Bujur Sangkar (sisi=" + sisiBujurSangkar + ") = " + luasBujurSangkar;
+
+      document.getElementById("hasilSegitiga").innerText = "Luas Segitiga (alas=" + alasSegitiga + ", tinggi=" + tinggiSegitiga + ") = " + luasSegitiga;
+
+      // Menampilkan hasil juga di console (opsional, buat cek lewat browser)
+      console.log("Luas Persegi Panjang:", luasPersegiPanjang);
+      console.log("Luas Bujur Sangkar:", luasBujurSangkar);
+      console.log("Luas Segitiga:", luasSegitiga);
+    </script>
+  </body>
+</html>
