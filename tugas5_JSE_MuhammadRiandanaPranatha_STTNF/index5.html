@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tugas 5 - Manajemen Produk Toko Online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 600px;
+      background-color: #ffffff;
+      margin: 16px 0 28px;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #2E4A7D;
+      color: #ffffff;
+    }
+    .form-box {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 14px 18px;
+      max-width: 420px;
+      margin-bottom: 16px;
+      display: none; /* disembunyiin dulu, baru muncul kalau tombol togglenya diklik */
+    }
+    .form-box.aktif {
+      display: block;
+    }
+    .form-box h3 {
+      margin-top: 0;
+      font-size: 15px;
+    }
+    .form-box input {
+      display: block;
+      width: 100%;
+      margin-bottom: 8px;
+      padding: 6px 8px;
+      box-sizing: border-box;
+    }
+    .form-box button {
+      padding: 6px 14px;
+      cursor: pointer;
+    }
+    .toolbar {
+      margin-bottom: 14px;
+    }
+    .toolbar button {
+      padding: 7px 16px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+    .catatan {
+      font-size: 13px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Manajemen Produk Toko Online</h1>
+  <p class="catatan">Buka Console (F12) buat lihat log tiap transaksi. Tabel di bawah ini ngikutin kondisi produkList terbaru.</p>
+
+  <div class="toolbar">
+    <button id="btnToggleTambah">+ Tambah Produk</button>
+    <button id="btnToggleHapus">- Hapus Produk</button>
+  </div>
+
+  <div class="form-box" id="formTambah">
+    <h3>Tambah Produk</h3>
+    <input type="number" id="inputId" placeholder="ID Produk">
+    <input type="text" id="inputNama" placeholder="Nama Produk">
+    <input type="number" id="inputHarga" placeholder="Harga">
+    <button id="btnTambah">Simpan</button>
+  </div>
+
+  <div class="form-box" id="formHapus">
+    <h3>Hapus Produk</h3>
+    <input type="number" id="inputHapusId" placeholder="ID Produk yang dihapus">
+    <button id="btnHapus">Hapus</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nama</th>
+        <th>Harga</th>
+      </tr>
+    </thead>
+    <tbody id="isiTabelProduk">
+      <!-- diisi lewat script5.js -->
+    </tbody>
+  </table>
+
+  <script src="script5.js"></script>
+
+</body>
+</html>
